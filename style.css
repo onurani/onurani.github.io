@@ -48,12 +48,15 @@ h1, h2, h3 {
     margin-bottom: 40px;
 }
 
+.contact {
+    margin-bottom: 60px;
+}
+
 footer {
     text-align: center;
     padding: 20px;
     background-color: #333;
     color: #fff;
-    position: fixed;
+    position: relative;
     width: 100%;
-    bottom: 0;
 }

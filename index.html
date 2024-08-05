@@ -5,12 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ozair Nurani - Portfolio</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
     <style>
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             background: linear-gradient(135deg, #ff4e50, #f9d423);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
             color: #333;
             text-align: center;
         }
@@ -35,6 +44,7 @@
         }
         nav ul li a:hover {
             color: #ff4e50;
+            transition: color 0.3s ease;
         }
         .container {
             max-width: 960px;
@@ -68,9 +78,12 @@
             color: #fff;
             padding: 10px 20px;
             border-radius: 5px;
+            cursor: pointer;
         }
         .skills ul li:hover {
             background: #f9d423;
+            transform: scale(1.1);
+            transition: transform 0.3s ease, background 0.3s ease;
         }
         footer {
             text-align: center;
@@ -96,14 +109,14 @@
         </nav>
     </header>
 
-    <section id="about" class="container about">
+    <section id="about" class="container about" data-aos="fade-up">
         <img src="./images/profile.jpg" alt="Profile Photo" width="150">
         <h1>Ozair Nurani</h1>
         <p>Software Engineering Student at Iowa State University. Passionate about web development and creating intuitive user interfaces.</p>
         <p>Connect with me on <a href="https://www.linkedin.com/in/ozair-nurani/" target="_blank">LinkedIn</a> or check out my projects on <a href="https://github.com/onurani" target="_blank">GitHub</a>.</p>
     </section>
 
-    <section id="experience" class="container experience">
+    <section id="experience" class="container experience" data-aos="fade-up">
         <h2>Experience</h2>
         <div class="job">
             <h3>Software Engineering Intern at Thompson Solution Groups</h3>
@@ -118,57 +131,42 @@
             <p><em>Jan 2024 – May 2024, Denver, CO</em></p>
             <ul>
                 <li>Managed the change management process for 25% of total website content.</li>
-                <li>Orchestrated a redesign process that improved user experience, developed high-fidelity prototypes in Figma.</li>
+                <li>Orchestrated a redesign process that improved user experience, developed high-fidelity prototypes, and reduced production costs.</li>
             </ul>
         </div>
         <div class="job">
             <h3>Software Engineering Intern at Cyclone Engineering Labs</h3>
-            <p><em>Jun 2023 – Aug 2023, Ames, IA</em></p>
+            <p><em>June 2023 – Aug 2023, Ames, IA</em></p>
             <ul>
                 <li>Researched models on blood glucose concentrations for patients, developed a relational database.</li>
-                <li>Gained 90% in ROI through research, demonstrating the long-term impact and value of contributions.</li>
+                <li>Gained 90% in ROI through research, demonstrating the long-term impact and value of contributions</li>
             </ul>
         </div>
     </section>
 
-    <section id="skills" class="container skills">
+    <section id="skills" class="container skills" data-aos="fade-up">
         <h2>Skills</h2>
         <ul>
-            <li>Programming Languages: Java, C, JavaScript, HTML, CSS</li>
-            <li>Frameworks and Libraries: JavaFX, Node.js, MongoDB</li>
-            <li>Tools and Platforms: Git, GitHub, Figma, Visual Studio Code</li>
-            <li>Methodologies: Agile, Test-Driven Development</li>
-            <li>Other: Relational Databases, UI/UX Design, API Development</li>
+            <li>Java</li>
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>HTML & CSS</li>
+            <li>React</li>
+            <li>SQL</li>
+            <li>Spring Boot</li>
         </ul>
     </section>
 
-    <section id="projects" class="container projects">
+    <section id="projects" class="container" data-aos="fade-up">
         <h2>Projects</h2>
         <div class="project">
-            <h3>Palletizer Software</h3>
-            <p><em>May 2024 – Aug 2024</em></p>
-            <ul>
-                <li>Developed a JavaFX-based touchscreen application for the Yaskawa Smart Pendant, enhancing operational efficiency by 20-30%.</li>
-                <li>Created APIs and socket communication for seamless data exchange between user inputs and robotic actions.</li>
-                <li>Built a UI for configuring robot movements, reducing error rates by 15% and improving user satisfaction by 25%.</li>
-                <li>Utilized Java and JavaFX for front-end development, ensuring a responsive and user-friendly interface.</li>
-                <li>Implemented robust error handling and validation mechanisms to enhance application reliability.</li>
-            </ul>
-        </div>
-        <div class="project">
-            <h3><a href="https://github.com/onurani/SE319" target="_blank">Code Crafters</a></h3>
-            <p><em>Mar 2024 – Apr 2024</em></p>
-            <ul>
-                <li>Crafted an interactive full-stack educational platform using Node.js and MongoDB for backend operations.</li>
-                <li>Developed an engaging, interactive curriculum that mirrors W3Schools’ approach, enhancing user engagement by 40%.</li>
-                <li>Implemented a responsive front-end using HTML, CSS, and JavaScript to ensure compatibility across devices.</li>
-                <li>Designed and integrated a dynamic user interface with interactive elements to facilitate learning.</li>
-                <li>Conducted user testing and incorporated feedback to continuously improve the platform's usability and effectiveness.</li>
-            </ul>
+            <img src="./images/project1.png" alt="Project 1">
+            <h3>Code Crafters Project</h3>
+            <p>This project showcases my ability to develop web applications using HTML and CSS. <a href="https://github.com/onurani/SE319" target="_blank">View the project on GitHub</a>.</p>
         </div>
     </section>
 
-    <section id="contact" class="container contact">
+    <section id="contact" class="container" data-aos="fade-up">
         <h2>Contact Me</h2>
         <p>You can reach me at <a href="mailto:onurani@iastate.edu">onurani@iastate.edu</a></p>
     </section>
@@ -176,5 +174,10 @@
     <footer>
         <p>&copy; 2024 Ozair Nurani</p>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

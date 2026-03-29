@@ -97,3 +97,57 @@ footer {
     width: 100%;
     margin-top: 40px;
 }
+
+
+.job-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 8px;
+}
+
+.company-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.company-name {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.job {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.job em {
+  display: block;
+  margin-bottom: 10px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+
+.job ul {
+  max-width: 720px;
+  padding-left: 20px;
+}
+
+.job li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.job {
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.job:last-child {
+  border-bottom: none;
+}
+
+
+

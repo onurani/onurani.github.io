@@ -110,6 +110,8 @@ footer {
   width: 48px;
   height: 48px;
   object-fit: contain;
+  max-width: 48px;  /* add this */
+  max-height: 48px; /* add this */
 }
 
 .company-name {
